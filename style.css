@@ -80,3 +80,9 @@ textarea{
 .whatsapp{
     background:#25d366;
 }
+
+.poster{
+    width:100%;
+    display:block;
+    border-radius:10px;
+}
