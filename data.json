@@ -1,18 +1,26 @@
 [
-  {
-    "id": 1,
-    "type": "youtube",
-    "judul": "Begini Rencana Kerjanya",
-    "youtube": "https://youtu.be/x4arUOuXm8A",
-    "download": "https://drive.google.com/file/d/xxxxx/view",
-    "script": "Isi script..."
-  },
-
-  {
-    "id": 2,
-    "type": "image",
-    "judul": "Promo Kopi Juwara",
-    "image": "images/promo-kopi-juwara.jpg",
-    "script": "Isi script promosi..."
-  }
+{
+"id": 1,
+"type": "youtube",
+"judul": "Begini Rencana Kerjanya",
+"youtube": "https://youtu.be/x4arUOuXm8A",
+"download": "https://drive.google.com/file/d/1lgrodEIH5097FgFfaL_t55f-aawdobSQ/view?usp=drivesdk",
+"script": "Begini Rencana kerjanya:\n\n✅ 1 BULAN 1 KOTAK KOPI BISA DIKONSUMSI PRIBADI ATAU DIJUAL KEMBALI, BOLEH 1 BOX ATAU DIECER PERBUNGKUSNYA\n\n✅ 1 BULAN BANTU 1 TEMAN ATAU SAUDARA, 1 AJA GPP, BIAR BISA PUNYA KESEMPATAN MENDAPATKAN 46JT/BULAN JUGA, SAMA SEPERTI KITA\n\n✅ 1TH KEMUDIAN, BUAT YG KONSISTEN MELAKUKAN INI MAKA 46 JT/BULAN AKAN TERUS MENGALIR DAN AKAN TERUS BERTAMBAH\n\nWOWWWWW GAMPANG APA GAMPANG????\n\nInfo Bisnis :\nWA me."
+},
+{
+"id": 2,
+"type": "youtube",
+"judul": "Kopi yang Aman Buat Lambung",
+"youtube": "https://youtu.be/zeph4SUybzQ",
+"download": "https://drive.google.com/file/d/1guJtH-zjCAyuJhPzEy1pln83FTXYd2tP/view?usp=drivesdk",
+"script": "ASSALAMU'ALAIKUM..\nSEMANGAT PAGI..!!\n\nKOPI SH JUWARA CAFE, Kopi mengandung JAMUR LINGZHI (GANODERMA) Patent Dunia...\n\nSudah beredar 20 thn di 7 Negara\nBegitu banyak kesaksian\n\nUntuk Minuman yang sehari²,\nPakailah yang Jelas baik & sehat & aman bagi tubuh kita...\n\nBerikan Tubuh kita, yang berkualitas & organic...\nUtk Jangka Panjang....\n\n👏🏻👏🏻🇮🇩🇮🇩👏🏻👏🏻"
+},
+{
+"id": 3,
+"type": "youtube",
+"judul": "Semangat Pagi Dengan Kopi Sehat",
+"youtube": "https://youtu.be/AhSW7V3xtFQ",
+"download": "https://drive.google.com/file/d/1ep3ziCIxmXj_V5t9G-R2E0nhVKrYPY1b/view?usp=drivesdk",
+"script": "Komponen-komponen utama: biji kopi kualitas premium, krimer nabati dan Yung Kien Ganoderma.\n\nManfaat-manfaat :\n\n• Terbuat dari biji kopi kualitas premium yang baru dipanggang, untuk cita rasa kopi terbaik, serta diperkaya dengan Yung Kien Ganoderma, untuk mendapatkan gabungan rasa pahit dari ganoderma dan kopi yang unik.\n\n• Menggunakan krimer nabati dengan bahan dasar minyak kelapa, sehingga bebas dari lemak trans yang berbahaya.\n\n• Tidak menggunakan bahan pengawet dan perisa tambahan, memberikan Anda rasa yang istimewa dan aroma yang harum.\n\n• Tidak mengandung gula dan ada juga varian plus gula tebu."
+}
 ]
