@@ -85,16 +85,24 @@ document.getElementById("promoContainer").innerHTML = html;
 
 });
 
-function copyText(id, url){
+function copyText(id){
 
     const text = document.getElementById(id);
 
+    const userUrl =
+        document.getElementById("userUrl")?.value || "";
+
     let copyContent = text.value;
 
-    if(url){
+    if(userUrl.trim() !== ""){
         copyContent += "\n\n━━━━━━━━━━\n";
-        copyContent += url;
+        copyContent += userUrl;
     }
+
+    navigator.clipboard.writeText(copyContent);
+
+    alert("Script berhasil dicopy!");
+}
 
     navigator.clipboard.writeText(copyContent);
 
