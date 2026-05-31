@@ -117,12 +117,7 @@ background:#25d366;
     border-radius:12px;
     margin-bottom:20px;
     box-shadow:0 3px 10px rgba(0,0,0,.08);
-}
 
-.url-box label{
-    display:block;
-    margin-bottom:8px;
-    font-weight:bold;
 }
 .url-box input:focus{
     outline:none;
@@ -153,29 +148,30 @@ background:#25d366;
 
 @media(max-width:768px){
 
-header{
-    padding:20px;
-}
+    header{
+        padding:20px;
+    }
 
-.content{
-    padding:15px;
-}
+    .content{
+        padding:15px;
+    }
 
-.btn{
-    width:100%;
-    text-align:center;
-}
-.promo-url{
-    margin-top:10px;
-    padding:10px;
-    background:#f8f8f8;
-    border-radius:8px;
-    font-size:14px;
-    word-break:break-all;
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .promo-url{
+        margin-top:10px;
+        padding:10px;
+        background:#f8f8f8;
+        border-radius:8px;
+        font-size:14px;
+        word-break:break-all;
+    }
 
     textarea{
-    min-height:180px;
+        min-height:180px;
     }
-}
 
 }
