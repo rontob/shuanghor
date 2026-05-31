@@ -104,11 +104,6 @@ function copyText(id){
     alert("Script berhasil dicopy!");
 }
 
-    navigator.clipboard.writeText(copyContent);
-
-    alert("Script + URL berhasil dicopy!");
-}
-
 function getYoutubeId(url){
 
 const regExp =
