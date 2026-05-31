@@ -2,104 +2,81 @@ fetch("data.json")
 .then(res => res.json())
 .then(data => {
 
-    let html = "";
+let html = "";
 
-    data.forEach(item => {
+data.forEach(item => {
+
+    let media = "";
+
+    if(item.type === "youtube"){
 
         const ytId = getYoutubeId(item.youtube);
 
-        html += `
-        <div class="card">
+        media = `
+        <iframe
+            class="video"
+            src="https://www.youtube.com/embed/${ytId}"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+        `;
+    }
 
-            <iframe
-                class="video"
-                src="https://www.youtube.com/embed/${ytId}"
-                frameborder="0"
-                allowfullscreen>
-            </iframe>
+    if(item.type === "image"){
 
-            <div class="content">
+        media = `
+        <a href="${item.image}" target="_blank">
+            <img
+                src="${item.image}"
+                class="poster"
+                alt="${item.judul}">
+        </a>
+        `;
+    }
 
-                <h2>${item.title}</h2>
+    html += `
+    <div class="card">
 
-                <textarea id="${item.id}" readonly>${item.script}</textarea>
+        ${media}
 
-                <div class="actions">
+        <div class="content">
 
-                    <button
-                        class="btn copy"
-                        onclick="copyText('${item.id}')">
-                        Copy Script
-                    </button>
+            <h2>${item.judul}</h2>
 
-                    <a
-                        class="btn download"
-                        href="${item.download}"
-                        target="_blank">
-                        Download Video
-                    </a>
+            <textarea id="${item.id}" readonly>${item.script}</textarea>
 
-                    <a
-                        class="btn whatsapp"
-                        href="https://wa.me/?text=${encodeURIComponent(item.script)}"
-                        target="_blank">
-                        Share WhatsApp
-                    </a>
+            <div class="actions">
 
-                </div>
+                <button
+                    class="btn copy"
+                    onclick="copyText('${item.id}')">
+                    Copy Script
+                </button>
+
+                ${item.download ? `
+                <a
+                    class="btn download"
+                    href="${item.download}"
+                    target="_blank">
+                    Download
+                </a>
+                ` : ''}
+
+                <a
+                    class="btn whatsapp"
+                    href="https://wa.me/?text=${encodeURIComponent(item.script)}"
+                    target="_blank">
+                    Share WhatsApp
+                </a>
 
             </div>
 
         </div>
-        `;
-    });
 
-    document.getElementById("promoContainer").innerHTML = html;
-
+    </div>
+    `;
 });
 
-function copyText(id){
+document.getElementById("promoContainer").innerHTML = html;
 
-    let text = document.getElementById(id);
-
-    text.select();
-    text.setSelectionRange(0,99999);
-
-    navigator.clipboard.writeText(text.value);
-
-    alert("Script berhasil dicopy!");
-}
-
-function getYoutubeId(url){
-
-    const regExp =
-    /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-
-    const match = url.match(regExp);
-
-    return (match && match[2].length === 11)
-    ? match[2]
-    : '';
-}
-if(item.type === "youtube"){
-
-    media = `
-    <iframe
-      class="video"
-      src="https://www.youtube.com/embed/${ytId}"
-      allowfullscreen>
-    </iframe>
-    `;
-
-}
-
-if(item.type === "image"){
-
-    media = `
-    <img
-      src="${item.image}"
-      class="poster"
-      alt="${item.judul}">
-    `;
-
-}
+});
