@@ -53,7 +53,7 @@ ${item.url ? `
 
                 <button
                     class="btn copy"
-                    onclick="copyText('script-${item.id}')">
+                    onclick="copyText('script-${item.id}', '${item.url || ''}')">
                     Copy Script
                 </button>
 
