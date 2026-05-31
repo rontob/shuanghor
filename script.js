@@ -8,7 +8,7 @@ data.forEach(item => {
 
     let media = "";
 
-    if(item.type === "youtube"){
+    if(item.type === "youtube") {
 
         const ytId = getYoutubeId(item.youtube);
 
@@ -22,7 +22,7 @@ data.forEach(item => {
         `;
     }
 
-    if(item.type === "image"){
+    if(item.type === "image") {
 
         media = `
         <a href="${item.image}" target="_blank">
@@ -43,13 +43,13 @@ data.forEach(item => {
 
             <h2>${item.judul}</h2>
 
-            <textarea id="${item.id}" readonly>${item.script}</textarea>
+            <textarea id="script-${item.id}" readonly>${item.script}</textarea>
 
             <div class="actions">
 
                 <button
                     class="btn copy"
-                    onclick="copyText('${item.id}')">
+                    onclick="copyText('script-${item.id}')">
                     Copy Script
                 </button>
 
@@ -80,3 +80,26 @@ data.forEach(item => {
 document.getElementById("promoContainer").innerHTML = html;
 
 });
+
+function copyText(id){
+
+const text = document.getElementById(id);
+
+navigator.clipboard.writeText(text.value);
+
+alert("Script berhasil dicopy!");
+
+}
+
+function getYoutubeId(url){
+
+const regExp =
+/^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+
+const match = url.match(regExp);
+
+return (match && match[2].length === 11)
+    ? match[2]
+    : '';
+
+}
