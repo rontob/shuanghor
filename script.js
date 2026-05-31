@@ -1,8 +1,4 @@
 fetch("data.json")
-.then(res => res.json())
-.then(data => {
-
-fetch("data.json")
 .then(res => {
 
     if(!res.ok){
@@ -10,7 +6,9 @@ fetch("data.json")
     }
 
     return res.json();
+
 })
+.then(data => {
     
 let html = "";
 
@@ -53,7 +51,7 @@ data.forEach(item => {
 
             <h2>${item.judul}</h2>
 
-            
+            <textarea id="script-${item.id}" readonly>${item.script}</textarea>
 
             <div class="actions">
 
@@ -72,12 +70,11 @@ data.forEach(item => {
                 </a>
                 ` : ''}
 
-                <a
-                    class="btn whatsapp"
-                    href="https://wa.me/?text=${encodeURIComponent(item.script)}"
-                    target="_blank">
-                    Share WhatsApp
-                </a>
+                <button
+    class="btn whatsapp"
+    onclick="shareWhatsapp('script-${item.id}')">
+    Share WhatsApp
+</button>
 
             </div>
 
@@ -155,5 +152,13 @@ document.addEventListener("DOMContentLoaded", () => {
     input.addEventListener("input", () => {
         localStorage.setItem("promoUrl", input.value);
     });
+
+});
+.catch(err => {
+
+    document.getElementById("promoContainer").innerHTML =
+        "<p>Gagal memuat data.json</p>";
+
+    console.error(err);
 
 });
