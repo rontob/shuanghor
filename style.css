@@ -115,5 +115,13 @@ header{
     width:100%;
     text-align:center;
 }
+.promo-url{
+    margin-top:10px;
+    padding:10px;
+    background:#f8f8f8;
+    border-radius:8px;
+    font-size:14px;
+    word-break:break-all;
+}
 
 }
