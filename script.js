@@ -86,7 +86,7 @@ data.forEach(item => {
 
 document.getElementById("promoContainer").innerHTML = html;
 
-});
+})
 .catch(err => {
 
     document.getElementById("promoContainer").innerHTML =
