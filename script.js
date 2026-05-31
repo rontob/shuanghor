@@ -2,6 +2,16 @@ fetch("data.json")
 .then(res => res.json())
 .then(data => {
 
+fetch("data.json")
+.then(res => {
+
+    if(!res.ok){
+        throw new Error("Gagal memuat data");
+    }
+
+    return res.json();
+})
+    
 let html = "";
 
 data.forEach(item => {
@@ -43,12 +53,8 @@ data.forEach(item => {
 
             <h2>${item.judul}</h2>
 
-            <textarea id="script-${item.id}" readonly>${item.script}</textarea>
-${item.url ? `
-<div class="promo-url">
-    🔗 ${item.url}
-</div>
-` : ''}
+            
+
             <div class="actions">
 
                 <button
@@ -102,6 +108,26 @@ function copyText(id){
     navigator.clipboard.writeText(copyContent);
 
     alert("Script berhasil dicopy!");
+}
+
+function shareWhatsapp(id){
+
+    const text = document.getElementById(id);
+
+    const userUrl =
+        document.getElementById("userUrl")?.value || "";
+
+    let content = text.value;
+
+    if(userUrl.trim() !== ""){
+        content += "\n\n━━━━━━━━━━\n";
+        content += userUrl;
+    }
+
+    window.open(
+        "https://wa.me/?text=" + encodeURIComponent(content),
+        "_blank"
+    );
 }
 
 function getYoutubeId(url){
