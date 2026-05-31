@@ -100,7 +100,16 @@ background:#007bff;
 .whatsapp{
 background:#25d366;
 }
-
+.promo-url{
+    margin-top:10px;
+    padding:12px;
+    background:#f8f9fa;
+    border-left:4px solid #007bff;
+    border-radius:8px;
+    font-size:14px;
+    word-break:break-all;
+    color:#333;
+}
 @media(max-width:768px){
 
 header{
