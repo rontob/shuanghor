@@ -1,0 +1,2 @@
+# shuanghor
+Kalimat promosi generator
