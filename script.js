@@ -81,14 +81,20 @@ document.getElementById("promoContainer").innerHTML = html;
 
 });
 
-function copyText(id){
+function copyText(id, url){
 
-const text = document.getElementById(id);
+    const text = document.getElementById(id);
 
-navigator.clipboard.writeText(text.value);
+    let copyContent = text.value;
 
-alert("Script berhasil dicopy!");
+    if(url){
+        copyContent += "\n\n━━━━━━━━━━\n";
+        copyContent += url;
+    }
 
+    navigator.clipboard.writeText(copyContent);
+
+    alert("Script + URL berhasil dicopy!");
 }
 
 function getYoutubeId(url){
