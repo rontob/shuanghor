@@ -121,3 +121,18 @@ return (match && match[2].length === 11)
     : '';
 
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const input = document.getElementById("userUrl");
+
+    if(!input) return;
+
+    input.value = localStorage.getItem("promoUrl") || "";
+
+    input.addEventListener("input", () => {
+        localStorage.setItem("promoUrl", input.value);
+    });
+
+});
