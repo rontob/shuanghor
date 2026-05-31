@@ -87,6 +87,14 @@ data.forEach(item => {
 document.getElementById("promoContainer").innerHTML = html;
 
 });
+.catch(err => {
+
+    document.getElementById("promoContainer").innerHTML =
+        "<p>Gagal memuat data.json</p>";
+
+    console.error(err);
+
+});
 
 function copyText(id){
 
@@ -154,11 +162,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
-.catch(err => {
 
-    document.getElementById("promoContainer").innerHTML =
-        "<p>Gagal memuat data.json</p>";
-
-    console.error(err);
-
-});
