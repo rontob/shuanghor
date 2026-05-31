@@ -124,6 +124,11 @@ background:#25d366;
     margin-bottom:8px;
     font-weight:bold;
 }
+.url-box input:focus{
+    outline:none;
+    border-color:#25d366;
+    box-shadow:0 0 0 3px rgba(37,211,102,.15);
+}
 
 .url-box input{
     width:100%;
