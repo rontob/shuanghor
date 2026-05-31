@@ -110,34 +110,6 @@ background:#25d366;
     word-break:break-all;
     color:#333;
 }
-@media(max-width:768px){
-
-header{
-    padding:20px;
-}
-
-.content{
-    padding:15px;
-}
-
-.btn{
-    width:100%;
-    text-align:center;
-}
-.promo-url{
-    margin-top:10px;
-    padding:10px;
-    background:#f8f8f8;
-    border-radius:8px;
-    font-size:14px;
-    word-break:break-all;
-}
-    .url-box{
-    background:white;
-    padding:15px;
-    border-radius:10px;
-    margin-bottom:20px;
-}
 
     .url-box{
     background:white;
@@ -159,6 +131,28 @@ header{
     border:1px solid #ddd;
     border-radius:8px;
     font-size:14px;
+}
+@media(max-width:768px){
+
+header{
+    padding:20px;
+}
+
+.content{
+    padding:15px;
+}
+
+.btn{
+    width:100%;
+    text-align:center;
+}
+.promo-url{
+    margin-top:10px;
+    padding:10px;
+    background:#f8f8f8;
+    border-radius:8px;
+    font-size:14px;
+    word-break:break-all;
 }
 
 }
