@@ -44,7 +44,11 @@ data.forEach(item => {
             <h2>${item.judul}</h2>
 
             <textarea id="script-${item.id}" readonly>${item.script}</textarea>
-
+${item.url ? `
+<div class="promo-url">
+    🔗 ${item.url}
+</div>
+` : ''}
             <div class="actions">
 
                 <button
